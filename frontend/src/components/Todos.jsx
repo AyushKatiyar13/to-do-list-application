@@ -1,19 +1,20 @@
- 
-// /* eslint-disable react/prop-types */
-// const Todos = ({todos}) => {
-//   return (
-//     <div>
-//      {todos.map((todo)=>{
-//          return <div>
-//              <h1>{todo.title}</h1>
-//              <p>{todo.description}</p>
-//              <button >{todos.completed === true ? "done" : "Mark as completed"}</button>
-//          </div>
-//      }
-       
-//     )}
-//     </div>
-//     )
-// }
+import './Todos.css';
 
-// export default Todos
+const Todos = ({ todos }) => {
+    return (
+      <div className="todos-container">
+        {todos.map((todo) => (
+          <div key={todo._id} className="todo-item">
+            <h1 className="todo-title">{todo.title}</h1>
+            <p className="todo-description">{todo.description}</p>
+            <button className={`todo-button ${todo.completed ? 'completed' : ''}`}>
+              {todo.completed ? "Done" : "Mark as Completed"}
+            </button>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  export default Todos;
+  

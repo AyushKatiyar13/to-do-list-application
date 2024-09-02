@@ -1,6 +1,5 @@
 import { useState } from "react";
-
- 
+import './CreateTodo.css';
 
 const CreateTodo = () => {
     const [value1,setvalue1] = useState("");
